@@ -15,6 +15,6 @@ public class Configs : IConfig
     [Description("Auto FriendlyFire Toggle")]
     public bool AutoFriendlyFireToggle { get; set; } = true;
 
-    [Description("Infinite Radio")] public bool InfiniteRadio { get; set; } = true;
+    [Description("Infinite Radio")] public bool InfiniteRadio { get; set; } = false;
 
 }

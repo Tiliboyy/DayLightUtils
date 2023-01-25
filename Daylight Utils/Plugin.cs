@@ -19,10 +19,8 @@ public class Plugin : Plugin<Configs>
         EventHandlers = new Eventhandlers(this);
         Player.UsedItem += Eventhandlers.OnUsingItem;
         Server.RespawningTeam += Eventhandlers.OnRespawningTeam;
-        Player.UsingRadioBattery -= Eventhandlers.UsingRadioBatter;
+        Player.UsingRadioBattery += Eventhandlers.UsingRadioBatter;
         Server.RoundEnded += Eventhandlers.OnRoundEnd;
-        
-        
         base.OnEnabled();
     }
 
@@ -34,9 +32,6 @@ public class Plugin : Plugin<Configs>
         Server.RoundEnded -= Eventhandlers.OnRoundEnd;
         EventHandlers = null;
         Instance = null;
-
-
-
         base.OnDisabled();
     }
 }
